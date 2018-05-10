@@ -1,0 +1,62 @@
+//noinspection GradleCompatible
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+android {
+    compileSdkVersion 25
+    buildToolsVersion "27.0.2"
+    defaultConfig {
+        applicationId "com.example.user.authmodule"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'io.reactivex.rxjava2:rxjava:2.0.5'
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.google.dagger:dagger:2.11-rc2'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.11-rc2'
+    compile 'com.google.dagger:dagger-android-support:2.11-rc2'
+    compile 'com.facebook.android:facebook-android-sdk:4.20.0'
+    compile 'com.google.android.gms:play-services-auth:9.0.0'
+    compile 'com.google.code.gson:gson:2.6.2'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    testCompile 'junit:junit:4.12'
+    final RETROFIT_VERSION = '2.3.0'
+
+    //Retrofit & OHHttpClient
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.2.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.4.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    implementation 'com.google.code.gson:gson:2.8.2'
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$RETROFIT_VERSION"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$RETROFIT_VERSION"
+    implementation "com.squareup.retrofit2:converter-gson:$RETROFIT_VERSION"
+    implementation "com.squareup.retrofit2:converter-scalars:$RETROFIT_VERSION"
+}
+

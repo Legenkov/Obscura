@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/common_back"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android"
+
+    >
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/til_sign_in_password"
+        android:layout_width="@dimen/et_password_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_et_password"
+        android:layout_marginLeft="@dimen/margin_left_et"
+        android:clipToPadding="false"
+        android:paddingBottom="13dp"
+        android:paddingLeft="5dp">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/et_signup_password"
+            android:layout_width="@dimen/et_password_width"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif"
+            android:textStyle="normal"
+            android:textColor="@color/common_hint"
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="7sp"
+            android:hint="@string/txt_et_hint_put_password" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/til_signin_email"
+        android:layout_width="@dimen/et_username_width"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_left_et"
+        android:layout_marginTop="@dimen/margin_top_et_username"
+        android:clipToPadding="false"
+        android:paddingBottom="13dp"
+        android:paddingLeft="5dp">
+
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/et_signup_email"
+            android:layout_width="@dimen/et_username_width"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif"
+            android:textStyle="normal"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="7sp"
+            android:hint="@string/txt_et_hint_put_email"
+
+            />
+
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/til_signin_confirm_password"
+        android:layout_width="@dimen/et_username_width"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_left_et"
+        android:layout_marginTop="@dimen/margin_top_et_confirm_password"
+        android:clipToPadding="false"
+        android:paddingBottom="13dp"
+        android:paddingLeft="5dp">
+
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/et_signup_confirm_password"
+            android:layout_width="@dimen/et_username_width"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif"
+            android:textStyle="normal"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="7sp"
+            android:hint="txt_et_hint_confirm_password"
+
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_signin_signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textSize_tv_signup"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="-7sp"
+        android:layout_marginLeft="@dimen/margin_left_tv_signin"
+        android:layout_marginTop="@dimen/margin_top_tv_signin"
+        android:text="@string/txt_btn_signup"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_signup_signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textSize_tv_in"
+        android:fontFamily="sans-serif"
+        android:textStyle="normal"
+        android:textColor="@color/white"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="5sp"
+        android:layout_marginLeft="@dimen/margin_left_btn_up"
+        android:layout_marginTop="@dimen/margin_top_btn_up"
+        android:text="txt_btn_in"
+        />
+
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/btn_signin_google"
+        android:layout_width="@dimen/iv_social_width"
+        android:layout_height="@dimen/iv_social_heigth"
+        android:background="@drawable/google_plus"
+        android:layout_marginLeft="@dimen/margin_left_btn_google"
+        android:layout_marginBottom="@dimen/margin_btn_social_bottom"
+        android:layout_alignParentBottom="true"
+        />
+
+
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/btn_signin_facebook"
+        android:layout_width="@dimen/iv_social_width"
+        android:layout_height="@dimen/iv_social_heigth"
+        android:background="@drawable/facebook"
+        android:layout_marginLeft="@dimen/margin_left_btn_facebook"
+        android:layout_marginBottom="@dimen/margin_btn_social_bottom"
+        android:layout_alignParentBottom="true"
+        />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/btn_signin_twitter"
+        android:layout_width="@dimen/iv_social_width"
+        android:layout_height="@dimen/iv_social_heigth"
+        android:background="@drawable/twitter"
+        android:layout_marginLeft="@dimen/margin_left_btn_twitter"
+        android:layout_marginBottom="@dimen/margin_btn_social_bottom"
+        android:layout_alignParentBottom="true"
+        />
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/btn_signup_signup"
+        android:text="ENTER >"
+        android:layout_marginLeft="@dimen/margin_top_btn_enter_left"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:layout_marginBottom="@dimen/margin_btn_enter_bottom"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>
