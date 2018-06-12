@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/editprofile_nsv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+             <RelativeLayout
+             android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                 <de.hdodenhof.circleimageview.CircleImageView
+                     android:id="@+id/editprofile_civ_photo"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:src="@drawable/ic_menu_camera"
+                     android:layout_centerHorizontal="true"/>
+                <EditText
+                    android:id="@+id/editprofile_et_name"
+                    android:padding="12dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:text="Name"
+                    android:hint="Name"
+                    android:textColorHint="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/editprofile_civ_photo"/>
+
+
+                    <EditText
+                        android:id="@+id/editprofile_et_surname"
+                        android:padding="12dp"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:text="Surname"
+                        android:hint="Surname"
+                        android:textColorHint="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editprofile_et_name"/>
+                    <EditText
+                     android:id="@+id/editprofile_et_middlename"
+                     android:padding="12dp"
+                     android:textSize="20sp"
+                     android:textStyle="bold"
+                     android:text="Middlename"
+                     android:hint="Middlename"
+                     android:textColorHint="@color/black"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_below="@+id/editprofile_et_surname"
+                        />
+                    <EditText
+                     android:id="@+id/editprofile_et_country"
+                     android:padding="12dp"
+                     android:textSize="20sp"
+                     android:textStyle="bold"
+                     android:text="Country"
+                     android:hint="Country"
+                     android:textColorHint="@color/black"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_below="@+id/editprofile_et_middlename"
+                     />
+                    <EditText
+                     android:id="@+id/editprofile_et_state"
+                     android:padding="12dp"
+                     android:textSize="20sp"
+                     android:textStyle="bold"
+                     android:text="State"
+                     android:hint="State"
+                     android:textColorHint="@color/black"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_below="@+id/editprofile_et_country"
+                     />
+                 <EditText
+                     android:id="@+id/editprofile_et_city"
+                     android:padding="12dp"
+                     android:textSize="20sp"
+                     android:textStyle="bold"
+                     android:text="City"
+                     android:hint="City"
+                     android:textColorHint="@color/black"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_below="@+id/editprofile_et_state"
+                     />
+             </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/main_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:layout_below="@id/editprofile_nsv"/>
+
+</RelativeLayout>
+
+

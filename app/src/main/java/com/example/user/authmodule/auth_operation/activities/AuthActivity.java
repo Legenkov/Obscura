@@ -29,7 +29,7 @@ public class AuthActivity extends BaseActivity implements IBaseView.IAuthView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auth);
         ObscuraApp.get(this).getAppComponent().inject(this);
-        presenter.init(this);
+//        presenter.init(this);
         onAuthListener.openFirstScreen(SCREEN_TYPE_SIGN_IN);
     }
 
@@ -79,7 +79,7 @@ public class AuthActivity extends BaseActivity implements IBaseView.IAuthView {
 
         @Override
         public void getSignUp(String email, String phone, String password) {
-            presenter.doSignUp(email, phone, password);
+            presenter.doSingUp(email, password);
         }
 
         @Override
@@ -89,7 +89,7 @@ public class AuthActivity extends BaseActivity implements IBaseView.IAuthView {
 
         @Override
         public void getSocialAuth(int type) {
-            presenter.doSocialAuth(AuthActivity.this, type);
+//            presenter.doSocialAuth(AuthActivity.this, type);
         }
 
         @Override

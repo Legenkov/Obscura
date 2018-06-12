@@ -26,10 +26,11 @@ public class ApiModule {
 
     @Provides
     @AppScope
-    IBaseInteractor.IInteractor providesInteractor() {
-        return new InteractorImpl();
+    IBaseInteractor.IInteractor providesInteractor(ObscuraApi apiService) {
+        return new InteractorImpl(apiService);
     }
     @Provides
+
     @AppScope
     public OkHttpClient provideOkHttpClient() {
         final OkHttpClient.Builder builder = new OkHttpClient.Builder();
@@ -69,9 +70,5 @@ public class ApiModule {
     public ObscuraApi provideApiService(Retrofit restAdapter) {
         return restAdapter.create(ObscuraApi.class);
     }
-    @Provides
-    @AppScope
-    public IInteractorContract provideInteractor(ObscuraApi apiService) {
-        return new AuthInteractorImpl(apiService);
-    }
+
 }

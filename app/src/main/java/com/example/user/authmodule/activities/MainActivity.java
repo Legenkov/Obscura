@@ -18,6 +18,7 @@ import com.example.user.authmodule.common.IBaseView;
 import com.example.user.authmodule.common.IMainListener;
 import com.example.user.authmodule.fragments.MainFragment;
 import com.example.user.authmodule.presenters.IPresenterContract;
+import com.mvc.imagepicker.ImagePicker;
 
 import javax.inject.Inject;
 
@@ -48,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements IBaseView.IMainVi
 
 
     private IMainListener mMainListener = callback -> {
-        mPresenter.doGetFeed(callback);
+//        mPresenter.doGetFeed(callback);
     };
 
     @Override
@@ -58,14 +59,14 @@ public class MainActivity extends AppCompatActivity implements IBaseView.IMainVi
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        ImagePicker.setMinQuality(500, 500);
         mFragmentManager = getSupportFragmentManager();
 
         mNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
         mNavigationView.setOnNavigationItemSelectedListener(mOnItemBottomItemSelectedListener);
 
         ObscuraApp.get(this).getAppComponent().inject(this);
-        mPresenter.init(this);
+//        mPresenter.init(this);
 
         Fragment fragment = mFragmentManager.findFragmentById(R.id.content_main);
 
@@ -88,7 +89,7 @@ public class MainActivity extends AppCompatActivity implements IBaseView.IMainVi
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_return:
-                mPresenter.doLogout(null, 0);
+                mPresenter.doLogout();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

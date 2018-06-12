@@ -2,7 +2,6 @@ package com.example.user.authmodule.presenters;
 
 import android.app.Application;
 
-import com.example.user.authmodule.auth_operation.activities.AuthActivity;
 import com.example.user.authmodule.common.IBaseView;
 import com.example.user.authmodule.interactors.IBaseInteractor;
 import com.example.user.authmodule.realm.IRealmUtils;
@@ -36,26 +35,20 @@ public class AuthPresenterImpl extends BasePresenter<IBaseView.IAuthView, IBaseI
 
     @Override
     public void doSignIn(String email, String password) {
-        interactor.singIn( email,  password);
+
 
     }
 
     @Override
-    public void doSignUp(String email, String phone, String password) {
+    public void doSingUp(String email, String password) {
 
     }
+
 
     @Override
     public void doRecoverAccount(String email) {
 
     }
-
-    @Override
-    public void doSocialAuth(AuthActivity activity, int type) {
-
-    }
-
-
 
     @Override
     public void dismiss() {

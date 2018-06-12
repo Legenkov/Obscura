@@ -22,6 +22,8 @@ public interface IBaseView {
     interface ISplashView extends IBaseView {
         void checkUserData(boolean is);
     }
+    interface IDetailView extends IBaseView{
+    }
 
  /* Сделать интерфейс отдельным классом *
     IMainPresenter {

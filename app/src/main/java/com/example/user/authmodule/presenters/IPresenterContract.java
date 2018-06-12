@@ -1,38 +1,43 @@
 package com.example.user.authmodule.presenters;
 
-import android.content.Intent;
-
-import com.example.user.authmodule.auth_operation.activities.AuthActivity;
 import com.example.user.authmodule.common.IBaseView;
-import com.example.user.authmodule.common.IMainListener;
+
+import java.io.File;
 
 /**
  * Created by User on 28.04.2018.
  */
 
-public interface IPresenterContract {
-    void dismiss();
+public interface IPresenterContract  {
 
     interface IAuthPresenter<V extends IBaseView.IAuthView>
             extends IPresenterContract {
-
-        void init(V v);
         void doSignIn(String email, String password);
-        void doSignUp(String email, String phone, String password);
-        void doRecoverAccount(String email);
-        void doSocialAuth(AuthActivity activity, int type);
+        void doSingUp(String email, String password);
+        void doRecoverAccount (String email);;
+
+
+
+
     }
 
     interface ISplashPresenter<V extends IBaseView.ISplashView> {
         void init(V v);
-        void doCheckUserData();
+        void doCheckUserData(); // todo 1 где вызывается?
     }
 
     interface IMainPresenter<V extends IBaseView.IMainView> {
-        void doLogout(String token, int type);
-        void doGetFeed(IMainListener.IDashboardCallback callback);
-        void onActivityResult(int requestCode, int resultCode, Intent data);
-        void init(V view);
-        void dismiss();
+        void doLogout();
+        void doGetFile(File file);
+        void doGetUsersList(Integer limit, Integer offset);
+        void doEditProfile(Integer  country_id, Integer  state_id, Integer  city_id, String name, String last_name, Integer  image_id);
+
+
+    }
+    interface IDetailPresenter<V extends IBaseView.IDetailView> {
+        void doUploadUserImage();
+        void doGetCountriesList(Integer limit, Integer  offset);
+        void doGetStatesList(Integer  country_id,Integer  limit, Integer  offset);
+        void doGetCitiesList(Integer  state_id,Integer  limit, Integer  offset);
     }
 }
