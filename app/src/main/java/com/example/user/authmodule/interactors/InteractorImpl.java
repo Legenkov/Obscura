@@ -13,6 +13,7 @@ import com.google.gson.JsonObject;
 import java.io.UnsupportedEncodingException;
 
 import okhttp3.MediaType;
+import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
@@ -145,8 +146,10 @@ public class InteractorImpl implements IBaseInteractor.IInteractor {
                 });
     }
 
+
+
     @Override
-    public Observable<JsonObject> todoUploadUserImage() {
+    public Observable<JsonObject> todoUploadUserImage(String action, String authKeyOrEmail, MultipartBody.Part part) {
         CommonRequest commonRequest = new CommonRequest();
 
         String json = this.toJson(commonRequest);
@@ -205,7 +208,7 @@ public class InteractorImpl implements IBaseInteractor.IInteractor {
         commonRequest.setState_id(state_id);
         commonRequest.setCity_id(city_id);
         commonRequest.setName(name);
-        commonRequest.setLast_name(last_name);
+        commonRequest.setLastname(last_name);
         commonRequest.setImage_id(image_id);
         String json = this.toJson(commonRequest);
         String encode = this.encode(json);

@@ -103,6 +103,14 @@
         android:scrollbars="vertical"
         android:layout_below="@id/editprofile_nsv"/>
 
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/editprofile_acbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EDIT PROFILE"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/main_recycler_view"/>
+
 </RelativeLayout>
 
 

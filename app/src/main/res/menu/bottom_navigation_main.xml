@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_profile"
+
+        android:icon="@drawable/dialog_back"
+        android:title="EDIT PROFILE"
+         />
+    <item
+        android:id="@+id/action_people"
+
+        android:icon="@drawable/dialog_back"
+        android:title="2"
+         />
+    <item
+    android:id="@+id/action_forum"
+
+    android:icon="@mipmap/obscuro_launch"
+    android:title="3"
+    />
+
+    <item
+        android:id="@+id/action_search"
+
+        android:icon="@drawable/dialog_back"
+        android:title="4"
+         />
+    <item
+        android:id="@+id/action_chat"
+
+        android:icon="@drawable/dialog_back"
+        android:title="5"
+        />
+</menu>

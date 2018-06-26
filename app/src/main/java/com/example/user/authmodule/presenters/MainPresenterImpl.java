@@ -295,6 +295,35 @@ public class MainPresenterImpl extends BasePresenter<IBaseView.IMainView, IBaseI
 
     }
 
+//    @Override
+//    public void doEditProfile(String country_id, String state_id, String city_id, String name, String last_name, String image_id) {
+//        if (!networkCheck.doNetworkCheck()) {
+//            view.showError("No connection");
+//            return;
+//        }
+//        if (file != null) {
+//            MediaType mediaType = MediaType.parse("image/jpeg");
+//            RequestBody requestBody = RequestBody.create(mediaType, file);
+//            try {
+//                Log.d("RETy", "MainPresenterImpl uploadFile(), requestBodyFile2.contentLength() "
+//                        + requestBody.contentLength());
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//            MultipartBody.Part multipartBody = MultipartBody.Part.createFormData("avatar", file.getName(), requestBody);
+//
+//            interactor.todoUploadUserImage("upload_avatar", "", multipartBody)
+//                    .subscribe(next -> {
+//                                Log.d("RETy", "MainPresenterImpl uploadFile(), " +
+//                                        "onNext() " + next.toString());
+//                            }, throwable -> {
+//                                Log.d("RETy", "MainPresenterImpl uploadFile(), " +
+//                                        "onNext() " + throwable.getMessage());
+//                            }
+//                    );
+//        }
+//    }
+
     @Override
     public void doEditProfile(Integer country_id, Integer state_id, Integer city_id, String name, String last_name, Integer image_id) {
         if (!networkCheck.doNetworkCheck()) {

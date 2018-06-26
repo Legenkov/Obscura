@@ -14,25 +14,6 @@ public class CommonRequest {
 
     private  String email;
     private  String password;
-    private  Integer limit;
-    private  Integer offset;
-    private  Integer country_id;
-    private  Integer state_id;
-    private  Integer city_id;
-    private  String name;
-    private  String last_name;
-    private  Integer image_id;
-
-
-    MediaType mediaType = MediaType.parse("application/x-www-form-urlencoded");
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
 
     public Integer getLimit() {
         return limit;
@@ -82,11 +63,11 @@ public class CommonRequest {
         this.name = name;
     }
 
-    public String getLast_name() {
+    public String getLastname() {
         return last_name;
     }
 
-    public void setLast_name(String last_name) {
+    public void setLastname(String last_name) {
         this.last_name = last_name;
     }
 
@@ -114,9 +95,49 @@ public class CommonRequest {
         this.body = body;
     }
 
+    private  Integer limit;
+    private  Integer offset;
+    private  Integer country_id;
+    private  Integer state_id;
+    private  Integer city_id;
+    private  String name;
+    private  String last_name;
+
+    public String getMiddlename() {
+        return middle_name;
+    }
+
+    public void setMiddlename(String middle_name) {
+        this.middle_name = middle_name;
+    }
+
+    private String middle_name;
+    private  Integer image_id;
+
+
+    MediaType mediaType = MediaType.parse("application/x-www-form-urlencoded");
+
+
+
     RequestBody body = RequestBody.create(mediaType, "a=foo&b=bar&c=wow&d=awesome&e=random&f=rainbows /* lots of strings */");
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+
+    public String toString() {
+        return "CommonRequest{" +
+                ", email=" + email +
+                ", password=" + password +
+                ", limit=" + limit +
+                ", offset=" + offset +
+                ", country_id=" + country_id +
+                ", state_id=" + state_id +
+                ", city_id=" + city_id +
+                ", name='" + name + '\'' +
+                ", last_name='" + last_name + '\'' +
+                ", image_id=" + image_id +
+                '}';
     }
 }

@@ -12,9 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.example.user.authmodule.R;
-import com.example.user.authmodule.auth_operation.activities.AuthActivity;
-import com.example.user.authmodule.common.IAuthListener;
-import com.example.user.authmodule.model.CommonRequest;
+import com.example.user.authmodule.common.IMainListener;
 import com.mvc.imagepicker.ImagePicker;
 
 import java.io.File;
@@ -29,7 +27,7 @@ import static android.graphics.Bitmap.CompressFormat.JPEG;
  */
 
 public class BaseActivity extends AppCompatActivity {
-    private IAuthListener onAuthListener;
+    private IMainListener onMainListener;
     protected FragmentManager mFragmentManager;
 
     @Override
@@ -82,8 +80,8 @@ public class BaseActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
             Log.d("RETy", "file.size " + file.length());
-            CommonRequest.put(file);
-            onAuthListener.updateAvatarWithGallery(bitmap);
+
+            onMainListener.updateAvatarWithGallery(bitmap);
         }
     }
 }

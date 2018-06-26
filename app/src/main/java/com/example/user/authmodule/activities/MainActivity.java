@@ -22,12 +22,14 @@ import com.mvc.imagepicker.ImagePicker;
 
 import javax.inject.Inject;
 
+import butterknife.BindView;
+
 public class MainActivity extends AppCompatActivity implements IBaseView.IMainView {
     public static final String TAG = "MainOperation";
-
+    @BindView(R.id.tv_Title)
     private BottomNavigationView mNavigationView;
     private FragmentManager mFragmentManager;
-
+    private  IMainListener mMainListener;
     @Inject
     IPresenterContract.IMainPresenter mPresenter;
 
@@ -48,9 +50,9 @@ public class MainActivity extends AppCompatActivity implements IBaseView.IMainVi
     };
 
 
-    private IMainListener mMainListener = callback -> {
+//    private IMainListener mMainListener = callback -> {
 //        mPresenter.doGetFeed(callback);
-    };
+//    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements IBaseView.IMainVi
         ImagePicker.setMinQuality(500, 500);
         mFragmentManager = getSupportFragmentManager();
 
-        mNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
+        mNavigationView = (BottomNavigationView) findViewById(R.id.action_return);
         mNavigationView.setOnNavigationItemSelectedListener(mOnItemBottomItemSelectedListener);
 
         ObscuraApp.get(this).getAppComponent().inject(this);
