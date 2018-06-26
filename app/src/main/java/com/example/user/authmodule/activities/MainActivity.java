@@ -27,7 +27,7 @@ import butterknife.BindView;
 public class MainActivity extends AppCompatActivity implements IBaseView.IMainView {
     public static final String TAG = "MainOperation";
     @BindView(R.id.tv_Title)
-    private BottomNavigationView mNavigationView;
+    public BottomNavigationView mNavigationView;
     private FragmentManager mFragmentManager;
     private  IMainListener mMainListener;
     @Inject

@@ -59,9 +59,9 @@ public class DetailActivity extends AppCompatActivity {
                 commonRequest.setName(name.getText().toString());
                 commonRequest.setLastname(surName.getText().toString());
                 commonRequest.setMiddlename(middleName.getText().toString());
-                commonRequest.setCountry_id(middleName.getText().toString());
-                commonRequest.setState_id(state.getText().toString());
-                commonRequest.setCity_id(city.getText().toString());
+//                commonRequest.setCountry_id(country.getText().toString());
+//                commonRequest.setState_id(state.getText().toString());
+//                commonRequest.setCity_id(city.getText().toString());
 
             }
 
